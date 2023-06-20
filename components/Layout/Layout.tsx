@@ -1,5 +1,6 @@
 import { PropsWithChildren } from "react";
 import Head from "next/head";
+import Navigation from "../Navigation/Navigation";
 
 export default function Layout({ children }: PropsWithChildren) {
   return (
@@ -14,7 +15,7 @@ export default function Layout({ children }: PropsWithChildren) {
       <div>
         <header>
           <div>Logo</div>
-          <div>Nav</div>
+          <Navigation />
         </header>
         <main>{children}</main>
         <footer>&copy; 2023 Web studio</footer>
