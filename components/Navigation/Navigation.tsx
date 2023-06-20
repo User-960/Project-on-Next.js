@@ -9,6 +9,9 @@ export default function Navigation() {
       <Link href="/about">
         О компании
       </Link>
+      <Link href="/contacts">
+        Контакты
+      </Link>
     </div>
   );
 }
