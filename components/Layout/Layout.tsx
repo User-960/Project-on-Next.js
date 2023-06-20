@@ -1,6 +1,7 @@
 import { PropsWithChildren } from "react";
 import Head from "next/head";
 import Navigation from "../Navigation/Navigation";
+import css from "./Layout.module.css";
 
 export default function Layout({ children }: PropsWithChildren) {
   return (
@@ -12,13 +13,13 @@ export default function Layout({ children }: PropsWithChildren) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div>
-        <header>
+      <div className={css.container}>
+        <header className={css.header}>
           <div>Logo</div>
           <Navigation />
         </header>
-        <main>{children}</main>
-        <footer>&copy; 2023 Web studio</footer>
+        <main className={css.main}>{children}</main>
+        <footer className={css.footer}>&copy; 2023 Web studio</footer>
       </div>
     </>
   );
