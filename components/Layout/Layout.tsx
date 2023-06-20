@@ -15,7 +15,7 @@ export default function Layout({ children }: PropsWithChildren) {
 
       <div className={css.container}>
         <header className={css.header}>
-          <div>Logo</div>
+          <div className={css.logo}>WEBSTUDIO</div>
           <Navigation />
         </header>
         <main className={css.main}>{children}</main>
