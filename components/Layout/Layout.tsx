@@ -2,8 +2,13 @@ import { PropsWithChildren } from "react";
 import Head from "next/head";
 import Navigation from "../Navigation/Navigation";
 import css from "./Layout.module.css";
+import Link from "next/link";
+import clsx from "clsx";
+import { useRouter } from "next/router";
 
 export default function Layout({ children }: PropsWithChildren) {
+  const { pathname } = useRouter();
+
   return (
     <>
       <Head>
@@ -15,7 +20,10 @@ export default function Layout({ children }: PropsWithChildren) {
 
       <div className={css.container}>
         <header className={css.header}>
-          <div className={css.logo}>WEBSTUDIO</div>
+          <Link href="/" className={clsx(
+            css.logo,
+            { ['disabled']: pathname === "/" }
+          )}>WEBSTUDIO</Link>
           <Navigation />
         </header>
         <main className={css.main}>{children}</main>
