@@ -37,3 +37,15 @@
 .groupItem:hover {
   background-color: #f2f2f2;
 }
+
+.portfolioItem {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.portfolioLink {
+  margin-top: 30px;
+  color: #f1576b;
+}

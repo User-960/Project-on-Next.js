@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { useRouter } from "next/router";
 import css from '../styles/portfolio.module.css';
 
-const PHOTOS_API_URL: any = 'https://jsonplaceholder.typicode.com/photos';
+const PHOTOS_API_URL: any = 'https://jsonplaceholder.typicode.com/photos/';
 
 const prepareData = (array: PortfolioItem[]): ItemsByGroup => {
   let firstGroup: ItemGroup = ['Корпоративные сайты', []];
@@ -43,8 +43,6 @@ export default function Portfolio() {
       const { data } = await axios.get<PortfolioItem[]>(PHOTOS_API_URL);
       const prepared = prepareData(data.slice(0, 6));
       setItemsByGroup(prepared);
-      console.log(prepared);
-
     } catch (e: any) {
       console.log('error');
     } finally {
@@ -74,7 +72,9 @@ export default function Portfolio() {
                   <div
                     key={id}
                     className={css.groupItem}
-                    onClick={() => push(`/portfolio/${id}`)}
+                    onClick={() => {
+                      push(`/portfolio/${id}`)
+                    }}
                   >
                     <Image src={thumbnailUrl} width={150} height={150} alt={title} />
                     <h3>{title}</h3>
