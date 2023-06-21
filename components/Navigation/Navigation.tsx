@@ -9,6 +9,7 @@ export default function Navigation() {
   return (
     <div className={css.container}>
       <ul className={css.list}>
+
         <li className={clsx(
           css.item,
           { ['disabled']: pathname === "/" }
@@ -17,6 +18,7 @@ export default function Navigation() {
             Главная
           </Link>
         </li>
+
         <li className={clsx(
           css.item,
           { ['disabled']: pathname === "/about" }
@@ -25,6 +27,16 @@ export default function Navigation() {
             О компании
           </Link>
         </li>
+
+        <li className={clsx(
+          css.item,
+          { ['disabled']: pathname === "/portfolio" }
+        )}>
+          <Link href="/portfolio">
+            Портфолио
+          </Link>
+        </li>
+
         <li className={clsx(
           css.item,
           { ['disabled']: pathname === "/contacts" }
@@ -33,6 +45,7 @@ export default function Navigation() {
             Контакты
           </Link>
         </li>
+
       </ul>
     </div>
   );
