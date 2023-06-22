@@ -4,8 +4,7 @@ import Image from 'next/image';
 import Link from "next/link";
 import css from '@/styles/portfolio.module.css';
 import axios from "axios";
-
-const PHOTOS_API_URL: any = 'https://jsonplaceholder.typicode.com/photos/';
+import { PHOTOS_API_URL } from "@/const";
 
 interface ItemProps {
   portfolioItem: PortfolioItem;
