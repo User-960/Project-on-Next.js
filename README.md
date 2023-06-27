@@ -9,8 +9,7 @@ The project implements static pages, as well as nested sections, the URL of whic
 ## What is used:
 
 - Programming languages: HTML, CSS, TypeScript;
-- Framework: React;
-- Libraries: Next.js, Axios, ESLint, CLSX;
+- Libraries: React, Next.js, Axios, ESLint, CLSX;
 
 ## To clone repository
 
@@ -22,7 +21,7 @@ git clone https://github.com/User-960/Project-on-Next.js.git
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm run dev`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
